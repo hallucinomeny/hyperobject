@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 
 def parse_arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Evaluate and compare language models.")
-    parser.add_argument("--cache_dir", type=str, default="/home/cloudforest/Weights", help="Directory to cache models")
+    parser.add_argument("--cache_dir", type=str, help="Directory to cache models")
     parser.add_argument("--max_tokens", type=int, default=200, help="Maximum number of tokens to generate per prompt")
     parser.add_argument("--batch_size", type=int, default=4, help="Batch size for prompt processing")
     parser.add_argument("--step_size", type=int, default=200, help="Number of tokens to generate per step")
